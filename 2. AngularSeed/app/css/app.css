@@ -1,0 +1,16 @@
+.ng-dirty.ng-invalid {
+	border-color: red;
+}
+
+.ng-dirty.ng-valid {
+	border-color: green;
+}
+
+.video-container{
+	margin: 0 auto;
+	width: 	1024px;
+}
+
+.video{
+	display: inline-block;
+}
