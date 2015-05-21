@@ -1,0 +1,50 @@
+<!-- Home view for not logged users -->
+<div ng-if="authenticationService.isGuest()">
+	<!-- Login -->
+	<div class="box">
+		<h2>Login</h2>
+		<p>
+			<label for="username">Username:</label>
+			<input type="text" id="username" ng-model="userData.username" required />
+		</p>
+		<p>
+			<label for="password">Password:</label>
+			<input type="text" id="password" ng-model="userData.password" required />
+		</p>
+		<p>
+			<a ng-click="login(userData)" class="button">Login</a>
+		</p>
+	</div>
+
+	<div class="box">
+		<h2>Register</h2>
+		<p>
+			<label for="username">Username</label>
+			<input type="text" id="username" ng-model="userData.username">
+		</p>
+		<p>
+			<label for="password">Password</label>
+			<input type="text" id="password" ng-model="userData.password">
+		</p>
+		<p>
+			<label for="confirmPassword">Confirm Password</label>
+			<input type="text" id="confirmPassword" ng-model="userData.confirmPassword">
+		</p>
+		<p>
+			<label for="name">Name</label>
+			<input type="text" id="name" ng-model="userData.name">
+		</p>
+		<p>
+			<label for="email">Email</label>
+			<input type="text" id="email" ng-model="userData.email">
+		</p>
+		<p>
+			<a ng-click="register(userData)" class="button">Register</a>
+		</p>
+	</div>
+</div>
+
+<!-- View for users -->
+<div ng-if="authenticationService.isLoggedIn()">
+	<h1>USER</h1>
+</div>	
