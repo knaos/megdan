@@ -1,0 +1,18 @@
+<div class="user-header">
+	<div class="user">
+		<img src="">
+		<span>{{username}}</span>
+	</div>
+	<nav>
+		<ul>
+			<li><a ng-click="newPost()">Post</a></li>
+			<li><a ng-click="showFriendRequests"></a>Friend requests</li>
+			<li><a ng-click="editProfile()"></a>Edit profile</li>
+			<li><a ng-click="changePassword()"></a>Change password</li>
+			<li><a ng-click="logout()"></a>Logout</li>
+		</ul>
+	</nav>
+	<div class="search">
+		<input type="text" ng-model="searchedTerm" placeholder="Search...">
+	</div>
+</div>

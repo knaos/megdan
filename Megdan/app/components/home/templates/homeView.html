@@ -46,6 +46,5 @@
 
 <!-- View for users -->
 <div ng-if="authenticationService.isLoggedIn()">
-	<h1>USER</h1>
-	<a ng-click="logout()">Logout</a>
+	<div ng-controller="UserHeaderController" ng-include="'app/components/home/user-header.html'"></div>
 </div>	
