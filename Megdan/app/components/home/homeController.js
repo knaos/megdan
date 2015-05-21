@@ -1,7 +1,7 @@
 'use strict';
 
 app.controller('HomeController', function  ($scope, authenticationService, notifyService, $location) {
-	
+
 	$scope.userData = {};
 
 	$scope.login = function login (userData) {
@@ -12,13 +12,13 @@ app.controller('HomeController', function  ($scope, authenticationService, notif
 			},
 			function error (err) {
 				notifyService('There was problem logging in!', err);
-			});	
+			});
 	};
 	/*
 	Register and login as a sideffect
 	 */
 	$scope.register = function register (userData) {
-		authenticationService.register(userData, 
+		authenticationService.register(userData,
 			function success (data) {
 				authenticationService.login(userData);
 				notifyService.showInfo('Successfully regsitered');
