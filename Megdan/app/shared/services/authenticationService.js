@@ -21,8 +21,13 @@ app.factory('authenticationService',  function($http, baseUrl){
 			}).error(error);
 	};
 
-	authenticationService.logout = function logout () {
-		delete sessionStorage.currentUser;
+	authenticationService.logout = function logout (success, error) {
+		// var headers = this.getAuthenticationHeaders();
+		// $http.post(serviceUrl + '/logout', headers)
+		// 	.success(function  (data, status, headers, config) {
+				delete sessionStorage.currentUser;
+			// 	success(data);
+			// }).error(error);
 	};
 
 	authenticationService.getCurrentUser = function getCurrentUser () {
@@ -46,7 +51,7 @@ app.factory('authenticationService',  function($http, baseUrl){
 		var headers = {};
 		var currentUser = this.getCurrentUser();
 		if (currentUser) {
-			headers.Authorization = 'Bearer' + currentUser.access_token;
+			headers.Authorization = 'Bearer ' + currentUser.access_token;
 		}
 		return headers;
 	};

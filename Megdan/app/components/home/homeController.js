@@ -2,7 +2,9 @@
 
 app.controller('HomeController', function  ($scope, authenticationService, notifyService, $location) {
 
+	$scope.authenticationService = authenticationService;
 	$scope.userData = {};
+	$scope.registerUserData = {};
 
 	$scope.login = function login (userData) {
 		authenticationService.login(userData,
@@ -11,7 +13,7 @@ app.controller('HomeController', function  ($scope, authenticationService, notif
 				$location.path('/');
 			},
 			function error (err) {
-				notifyService('There was problem logging in!', err);
+				notifyService.showError('There was problem logging in!', err);
 			});
 	};
 	/*
@@ -20,12 +22,22 @@ app.controller('HomeController', function  ($scope, authenticationService, notif
 	$scope.register = function register (userData) {
 		authenticationService.register(userData,
 			function success (data) {
-				authenticationService.login(userData);
+				authenticationService.login(userData,
+				 function (){},
+				 function (err){
+				 	notifyService.showInfo('Something went wrong',err);
+				 });
 				notifyService.showInfo('Successfully regsitered');
 				$location.path('/');
 			},
 			function error (err) {
-				notifyService('There was problem while registering!', err);
+				notifyService.showError('There was problem while registering!', err);
 			});
+	};
+
+	$scope.logout = function logout () {
+		authenticationService.logout();
+		notifyService.showInfo('Logged out!');
+		
 	};
 });

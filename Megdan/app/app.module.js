@@ -1,3 +1,3 @@
-var app = angular.module('megdan', []);
+var app = angular.module('megdan', ['ngRoute', 'ngResource']);
 
 app.constant('baseUrl', 'http://softuni-social-network.azurewebsites.net/api');

@@ -20,26 +20,26 @@
 		<h2>Register</h2>
 		<p>
 			<label for="username">Username</label>
-			<input type="text" id="username" ng-model="userData.username">
+			<input type="text" id="username" ng-model="registerUserData.username">
 		</p>
 		<p>
 			<label for="password">Password</label>
-			<input type="text" id="password" ng-model="userData.password">
+			<input type="text" id="password" ng-model="registerUserData.password">
 		</p>
 		<p>
 			<label for="confirmPassword">Confirm Password</label>
-			<input type="text" id="confirmPassword" ng-model="userData.confirmPassword">
+			<input type="text" id="confirmPassword" ng-model="registerUserData.confirmPassword">
 		</p>
 		<p>
 			<label for="name">Name</label>
-			<input type="text" id="name" ng-model="userData.name">
+			<input type="text" id="name" ng-model="registerUserData.name">
 		</p>
 		<p>
 			<label for="email">Email</label>
-			<input type="text" id="email" ng-model="userData.email">
+			<input type="text" id="email" ng-model="registerUserData.email">
 		</p>
 		<p>
-			<a ng-click="register(userData)" class="button">Register</a>
+			<a ng-click="register(registerUserData)" class="button">Register</a>
 		</p>
 	</div>
 </div>
@@ -47,4 +47,5 @@
 <!-- View for users -->
 <div ng-if="authenticationService.isLoggedIn()">
 	<h1>USER</h1>
+	<a ng-click="logout()">Logout</a>
 </div>	
