@@ -2,8 +2,7 @@
 /*
 Here are all the services based on the 'me' URL
  */
-app.factory('profileService', function  ($scope, $http, baseUrl, authenticationService,
- notifyService, defaultPageSize) {
+app.factory('profileService', function  ($http, baseUrl, authenticationService, notifyService, defaultPageSize) {
 	
 	var serviceUrl = baseUrl + '/me';
 	return{
@@ -130,6 +129,7 @@ app.factory('profileService', function  ($scope, $http, baseUrl, authenticationS
 			};
 			$http(headers).success(success).error(error);
 		},
+
 		/**
 		 * Edit profile service
 		 * @param  {object} profileData Should containt name, 
@@ -146,7 +146,6 @@ app.factory('profileService', function  ($scope, $http, baseUrl, authenticationS
 				data: profileData
 			};
 			$http(headers).success(success).error(error);
-		},
-
+		}
 	};
 });
