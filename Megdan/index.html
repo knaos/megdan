@@ -1,19 +1,34 @@
 <!DOCTYPE html>
-<html ng-app="megdan">
+<html ng-app="megdan" ng-controller="AppController">
 <head lang="en" >
     <meta charset="UTF-8">
     <title>Angular Seed</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/app.css">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+	
 
-    <script src="assets/lib/angular/angular.js"></script>
-
-    <script type="text/javascript" src="app/app.module.js"></script>
-    <script type="text/javascript" src="app/app.routes.js"></script>
-
+	<!-- CONTROLLERS -->
 </head>
 
 <body>
+	<div id="app-content">
+		<div class="col-md-10" ng-view></div>
+	</div>
+	<footer>
+		Добре дошли на мегдана!!!
+	</footer>
 
+
+	<!-- LIBRARIES -->
+    <script src="assets/lib/angular/angular.js"></script>
+    <script src="assets/lib/angular/angular-resource.js"></script>
+    <script src="assets/lib/angular/angular-route.js"></script>
+
+	<!-- APP -->
+    <script type="text/javascript" src="app/app.module.js"></script>
+    <script type="text/javascript" src="app/app.routes.js"></script>
+	<!-- SERVICES -->
+	<script type="text/javascript" src="app/shared/user/authenticationService.js"></script>
+	<script type="text/javascript" src="app/shared/user/notifyService.js"></script>
 </body>
 </html>
