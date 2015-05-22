@@ -12,6 +12,11 @@ app.config(function($routeProvider) {
 		controller: 'EditProfileController'
 	});
 
+	$routeProvider.when('/profile/password', {
+		templateUrl: 'app/components/profile/templates/change-password.html',
+		controller: 'ChangePasswordController'
+	});
+
 	$routeProvider.otherwise({
 		redirectTo: '/'
 	});
