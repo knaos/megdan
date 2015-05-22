@@ -1,11 +1,11 @@
-<div class="user-header">
+<div class="user-header clearfix">
 	<div class="user">
 		<div class="profile-image-small pull-left">
 			<img ng-src="{{profileData.profileImageData}}">
 		</div>
 		<h5>{{profileData.name}}</h5>
 	</div>
-	<nav>
+	<nav class="pull-left">
 		<ul class="list-unstyled clear user-header-menu">
 			<li><a ng-click="newPost()">Post</a></li>
 			<li><a ng-click="showFriendRequests()">Friend requests <strong>{{friendRequests.length}}</strong></a></li>
@@ -14,7 +14,8 @@
 			<li><a ng-click="logout()">Logout</a></li>
 		</ul>
 	</nav>
-	<div class="search">
-		<input type="text" ng-model="searchedTerm" placeholder="Search...">
+	<div ng-controller="SearchController" class="search pull-right" ng-include="'app/components/home/templates/search.html'">
+
 	</div>
 </div>
+
