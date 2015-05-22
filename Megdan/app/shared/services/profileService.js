@@ -2,8 +2,8 @@
 /*
 Here are all the services based on the 'me' URL
  */
-app.factory('profileService', function  ($http, baseUrl, authenticationService, notifyService, defaultPageSize) {
-	
+app.factory('profileService', function  ($http, baseUrl, authenticationService) {
+
 	var serviceUrl = baseUrl + '/me';
 	return{
 
@@ -104,17 +104,18 @@ app.factory('profileService', function  ($http, baseUrl, authenticationService, 
 		 * @param  {[type]} error       [description]
 		 * @return {array}             Array of posts
 		 */
-		getNewsFeedPages: function  (startPostId, success, error) {
+		getNewsFeedPages: function  (params, success, error) {
 			var headers = {
 				method: 'GET',
-				url: serviceUrl + '/feed?StartPostId=' + startPostId + '&PageSize=' + defaultPageSize,
+				url: serviceUrl + '/feed',
+				params: params,
 				headers: authenticationService.getAuthenticationHeaders()
 			};
 			$http(headers).success(success).error(error);
 		},
 
 		/**
-		 * Changes the password. 
+		 * Changes the password.
 		 * @param  {Object} passwordData    Should contain oldPassword, newPassword, confirmPassword
 		 * @param  {[type]} success [description]
 		 * @param  {[type]} error   [description]
@@ -132,7 +133,7 @@ app.factory('profileService', function  ($http, baseUrl, authenticationService, 
 
 		/**
 		 * Edit profile service
-		 * @param  {object} profileData Should containt name, 
+		 * @param  {object} profileData Should containt name,
 		 * email, profileImageData, coverImageData, gender
 		 * @param  {[type]} success     [description]
 		 * @param  {[type]} error       [description]

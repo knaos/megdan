@@ -20,11 +20,11 @@
 		<h2>Register</h2>
 		<p>
 			<label for="username">Username</label>
-			<input type="text" id="username" ng-model="registerUserData.username">
+			<input type="text" id="usernameRegister" ng-model="registerUserData.username">
 		</p>
 		<p>
 			<label for="password">Password</label>
-			<input type="text" id="password" ng-model="registerUserData.password">
+			<input type="text" id="passwordRegister" ng-model="registerUserData.password">
 		</p>
 		<p>
 			<label for="confirmPassword">Confirm Password</label>
@@ -46,5 +46,5 @@
 
 <!-- View for users -->
 <div ng-if="authenticationService.isLoggedIn()">
-	<div ng-controller="UserHeaderController" ng-include="'app/components/home/templates/user-header.html'"></div>
+
 </div>	

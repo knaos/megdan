@@ -1,6 +1,6 @@
 'use strict';
 
-app.factory('userService', function ($scope, baseUrl, authenticationService, $http, defaultPageSize){
+app.factory('userService', function (baseUrl, authenticationService, $http){
 	var serviceUrl = baseUrl + '/users';
 	return{
 		/**
@@ -43,10 +43,11 @@ app.factory('userService', function ($scope, baseUrl, authenticationService, $ht
 		 * @param  {[type]} error      [description]
 		 * @return {Array}            Array of objects{id, profileImageData, username, name, gender}
 		 */
-		searchUsersByName: function  (searchTerm, success, error) {
+		searchUsersByName: function  (params, success, error) {
 			var request = {
 				method: 'GET',
-				url: serviceUrl + '/search?searchTerm=' + searchTerm,
+				url: serviceUrl + '/search',
+				params: params,
 				headers: authenticationService.getAuthenticationHeaders()
 			};
 			$http(request).success(success).error(error);
@@ -59,7 +60,7 @@ app.factory('userService', function ($scope, baseUrl, authenticationService, $ht
 		 * @param  {[type]} success     [description]
 		 * @param  {[type]} error       [description]
 		 * @return {Array}             Array with objects{
-		 *                                   id, 
+		 *                                   id,
 		 *                                   author(id,profileImageData,username,name,gender),
 		 *                                   wallOwner(id,profileImageData,username,name,gender),
 		 *                                   "postContent": "Howdy folks!",
@@ -68,14 +69,15 @@ app.factory('userService', function ($scope, baseUrl, authenticationService, $ht
 									        "liked": false,
 									        "totalCommentsCount": 5,
 									        "comments"
-		 *                                   
+		 *
 		 *                                   }
 		 */
-		getFriendWallByPages: function  (targetUser, startPostId, success, error) {
+		getFriendWallByPages: function  (params, success, error) {
 			var request = {
 				method: 'GET',
-				url: serviceUrl + '/' + targetUser + '/wall?StartPostId='+ startPostId +'&PageSize='+ defaultPageSize,
-				headers: authenticationService.getAuthenticationHeaders()
+				url: serviceUrl + '/' + targetUser + '/wall',
+				headers: authenticationService.getAuthenticationHeaders(),
+				params: params
 			};
 			$http(request).success(success).error(error);
 		},

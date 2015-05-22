@@ -14,6 +14,7 @@ app.controller('HomeController', function  ($scope, authenticationService, notif
 			},
 			function error (err) {
 				notifyService.showError('There was problem logging in!', err);
+
 			});
 	};
 	/*
@@ -35,9 +36,5 @@ app.controller('HomeController', function  ($scope, authenticationService, notif
 			});
 	};
 
-	$scope.logout = function logout () {
-		authenticationService.logout();
-		notifyService.showInfo('Logged out!');
-		
-	};
+
 });

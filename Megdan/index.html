@@ -1,22 +1,25 @@
 <!DOCTYPE html>
-<html ng-app="megdan" >
+<html ng-app="megdan" ng-controller="AppController">
 <head lang="en" >
     <meta charset="UTF-8">
     <title>Angular Seed</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/app.css">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-
-
-	<!-- CONTROLLERS -->
 </head>
 
 <body>
 	<div id="app-content">
-		<div class="col-md-10" ng-view></div>
+		<header>
+			<div ng-if="authenticationService.isLoggedIn()">
+				<div ng-controller="UserHeaderController" ng-include="'app/shared/templates/user-header.html'"></div>
+			</div>
+		</header>
+		<div class="col-md-10 clear clearfix" ng-view></div>
+		<footer>
+			Добре дошли на мегдана!!!
+		</footer>
 	</div>
-	<footer>
-		Добре дошли на мегдана!!!
-	</footer>
+
 
 
 	<!-- LIBRARIES -->
@@ -37,7 +40,9 @@
 	<script type="text/javascript" src="app/shared/services/profileService.js"></script>
 	<script type="text/javascript" src="app/shared/services/userService.js"></script>
 	<!-- CONTROLLERS -->
-    <script type="text/javascript" src="app/components/home/controllers/homeController.js"></script>
-    <script type="text/javascript" src="app/components/home/controllers/UserHeaderController.js"></script>
+    <script type="text/javascript" src="app/components/home/controllers/HomeController.js"></script>
+	<script type="text/javascript" src="app/components/profile/controllers/EditProfileController.js"></script>
+	<script type="text/javascript" src="app/shared/controllers/UserHeaderController.js"></script>
+	<script src="app/shared/controllers/AppController.js"></script>
 </body>
 </html>

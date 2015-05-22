@@ -1,0 +1,51 @@
+<div>
+    <h2>Edit profile</h2>
+    <div class="box">
+        <div class="col-md-3">
+            <div class="edit-profile-picture">
+                <div class="image-box">
+                    <p ng-if="!profileData.profileImageData">Image Preview</p><img ng-if="profileData.profileImageData" ng-src="{{profileData.profileImageData}}" alt=""/>
+                </div>
+                <a ng-click="deleteProfileImage()" class="button">Delete Image</a>
+                <p>Allowed format: .jpg</p>
+                <P>limit : 128kb</P>
+                <input type="file" id="profileImage"
+                       onchange="angular.element(this).scope().fileSelectedProfile(this)" />
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="box">
+                <p>
+                    <label for="name">
+                        Name
+                    </label>
+                    <input type="text" id="name" ng-model="profileData.name"/>
+
+                </p>
+                <p>
+                    <label for="email">
+                        Email
+                    </label>
+                    <input type="text" id="email" value="{{profileData.email}}"/>
+                </p>
+                <p>
+                    <label >
+                       Gender
+                    </label>
+                    <span>Male</span><input name="male" type="radio" value="0" ng-checked="profileData.gender == 0" ng-model="profileData.gender"/>
+                    <span>Female</span><input type="radio" value="1" ng-checked="profileData.gender == 1" ng-model="profileData.gender"/>
+                    <span>|Other :(</span><input type="radio" value="2" ng-checked="profileData.gender == 2" ng-model="profileData.gender"/>
+                </p>
+            </div>
+            <div >
+                <div class="pull-left">
+                    <input type="file" id="coverImage" onchange="angular.element(this).scope().fileSelectedCover(this)"/>
+                </div>
+                <div class="pull-left cover-preview">
+                    <img ng-src="{{profileData.coverImageData}}" alt="Cover photo" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <button ng-click="updateProfile()">Update profile</button>
+</div>
