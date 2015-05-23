@@ -41,8 +41,8 @@
                 <div class="comment-attributes pull-right">
                     <div class="like-box">
                         <span >{{comment.likesCount}}</span>
-                        <a ng-click="unlikeComment()" ng-if="comment.liked">Unlike</a>
-                        <a ng-click="likeComment()" ng-if="!comment.liked">Like</a>
+                        <a ng-click="unlikeComment(post, comment)" ng-if="comment.liked">Unlike</a>
+                        <a ng-click="likeComment(post, comment)" ng-if="!comment.liked">Like</a>
                     </div>
 
                 </div>
