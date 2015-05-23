@@ -11,7 +11,7 @@
 	<div id="app-content">
 		<header>
 			<div ng-if="authenticationService.isLoggedIn()">
-				<div ng-controller="UserHeaderController" ng-include="'app/components/user header/templates/user-header.html'"></div>
+				<div ng-controller="UserHeaderController" ng-include="'app/components/user_header/templates/user-header.html'"></div>
 			</div>
 		</header>
 		<div class="col-md-10 clear clearfix" ng-view></div>
@@ -43,10 +43,13 @@
 	<!-- CONTROLLERS -->
     <script type="text/javascript" src="app/components/home/controllers/HomeController.js"></script>
 	<script type="text/javascript" src="app/components/profile/controllers/EditProfileController.js"></script>
-	<script type="text/javascript" src="app/components/user%20header/controllers/UserHeaderController.js"></script>
+	<script type="text/javascript" src="app/components/user_header/controllers/UserHeaderController.js"></script>
 	<script src="app/shared/controllers/AppController.js"></script>
 	<script src="app/components/profile/controllers/ChangePasswordController.js"></script>
-	<script src="app/components/user%20header/controllers/SearchController.js"></script>
+	<script src="app/components/user_header/controllers/SearchController.js"></script>
+	<script src="app/components/news-feed/controllers/NewsFeedController.js"></script>
+
+
 
 
 </body>

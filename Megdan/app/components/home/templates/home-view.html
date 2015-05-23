@@ -45,6 +45,6 @@
 </div>
 
 <!-- View for users -->
-<div ng-if="authenticationService.isLoggedIn()">
+<div ng-controller="NewsFeedController" ng-if="authenticationService.isLoggedIn()" ng-include="'app/components/news-feed/templates/news-feed.html'">
 
 </div>	

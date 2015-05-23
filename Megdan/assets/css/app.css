@@ -33,6 +33,11 @@ img{
 
 .profile-image-small{
 	width: 50px;
+	height: 50px;
+	background-image: url('../img/default-user-image.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
 }
 
 .user-header{
@@ -42,4 +47,16 @@ img{
 .cover-preview{
 	width: 800px;
 	height: 200px;
+}
+
+.post{
+	padding:10px;
+	border: 1px solid black;
+
+}
+
+.comment{
+	padding:10px;
+	border: 1px solid black;
+	border-radius: 5px;
 }

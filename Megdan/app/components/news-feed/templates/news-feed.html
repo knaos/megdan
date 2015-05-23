@@ -1,0 +1,53 @@
+<div class="clearfix">
+    <h2>News Feed</h2>
+    <div class="col-md-7">
+        <article ng-repeat="post in posts">
+            <div class="post clearfix">
+                <div class="post-header">
+                    <div class="profile-image-small">
+                        <img ng-if="post.author.profileImageData" ng-src="{{post.author.profileImageData}}" alt=""/>
+                    </div>
+                    <h5>{{post.author.name}}</h5>
+                    <div class="date">
+                        {{post.date | date}}
+                    </div>
+                </div>
+                <div class="post-content">
+                    {{post.postContent}}
+                </div>
+                <div class="post-attributes pull-right">
+                    <div class="like-box">
+                        <span >{{post.likesCount}}</span>
+                        <a ng-click="unlikePost(post)" ng-if="post.liked">Unlike</a>
+                        <a ng-click="likePost(post)" ng-if="!post.liked">Like</a>
+                    </div>
+                    <div class="comment-box">
+                        <span >{{post.totalCommentsCount}}</span>
+                        <a ng-click="commentPost()" >Comment</a>
+                    </div>
+                </div>
+            </div>
+            <div class="comment  clearfix" ng-repeat="comment in post.comments">
+                <div class="profile-image-small">
+                    <img ng-src="{{comment.author.profileImageData}}" alt=""/>
+                </div>
+                <h5>{{comment.author.name}}</h5>
+                <div class="date">
+                    {{comment.date | date}}
+                </div>
+                <div class="comment-content">
+                    {{comment.commentContent}}
+                </div>
+                <div class="comment-attributes pull-right">
+                    <div class="like-box">
+                        <span >{{comment.likesCount}}</span>
+                        <a ng-click="unlikeComment()" ng-if="comment.liked">Unlike</a>
+                        <a ng-click="likeComment()" ng-if="!comment.liked">Like</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </article>
+    </div>
+</div>

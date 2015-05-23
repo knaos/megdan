@@ -1,0 +1,27 @@
+<ul>
+    <li class ="request" ng-repeat="request in friendRequests">
+        <div class="profile-image-small">
+            <img ng-src="request.user.profileImageData" alt=""/>
+        </div>
+        <div class="pull-right">
+            <h3>{{request.user.name}}</h3>
+            <!-- This is shown if the request is pending-->
+            <span ng-if="request.status == 0">
+                <button ng-click="acceptFriendRequest(request)" >Accept</button>
+                <button ng-click="rejectFriendRequest(request)">Reject</button>
+            </span>
+            <!-- This is shown if the request is accepted-->
+            <span ng-if="request.status == 'accepted'">
+                Frriend request accepted
+            </span>
+            <!-- This is shown if the request is rejected-->
+            <span ng-if="request.status == 'rejected'">
+                Friend request rejected
+            </span>
+
+
+        </div>
+
+    </li>
+    <li>{{profileData.friendRequests.length}} results total</li>
+</ul>

@@ -99,10 +99,10 @@ app.factory('profileService', function  ($http, baseUrl, authenticationService) 
 
 		/**
 		 * Gets the news feed
-		 * @param  {int} startPostId The amount of posts from which it starts counting
+		 * @param  {Object}  The amount of posts from which it starts counting
 		 * @param  {[type]} success     [description]
 		 * @param  {[type]} error       [description]
-		 * @return {array}             Array of posts
+		 * @return {Array}             Array of posts
 		 */
 		getNewsFeedPages: function  (params, success, error) {
 			var headers = {
