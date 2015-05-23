@@ -1,6 +1,6 @@
 'use strict';
 
-app.config(function($routeProvider) {
+app.config(function($routeProvider, $httpProvider) {
 
 	$routeProvider.when('/', {
 		templateUrl: 'app/components/home/templates/home-view.html',
@@ -17,7 +17,25 @@ app.config(function($routeProvider) {
 		controller: 'ChangePasswordController'
 	});
 
+	$routeProvider.when('/profile/friends', {
+		templateUrl: 'app/components/profile/templates/friends.html',
+		controller: 'FriendsController'
+	});
+
 	$routeProvider.otherwise({
 		redirectTo: '/'
+	});
+
+	$httpProvider.interceptors.push(function($q, $location) {
+		return {
+			'responseError': function(rejection){
+				var defer = $q.defer();
+				if(rejection.status == 401){
+					$location.path('/');
+				}
+				defer.reject(rejection);
+				return defer.promise;
+			}
+		};
 	});
 });

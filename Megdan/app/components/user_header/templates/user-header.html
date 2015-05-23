@@ -6,12 +6,13 @@
 		<h5>{{profileData.name}}</h5>
 	</div>
 	<nav class="pull-left">
-		<ul class="list-unstyled clear user-header-menu">
-			<li><a ng-click="newPost()">Post</a></li>
+		<ul class="list-unstyled clear user-header-menu ">
+			<li><a href="/">NewsFeed</a></li>
 			<li>
 				<a ng-click="showFriendRequests()">Friend requests <strong>{{friendRequests.length}}</strong></a>
 				<div ng-if="showFriends" ng-include="'app/components/user_header/templates/friend-requests.html'"></div>
 			</li>
+			<li><a href="#/profile/friends" >Friends</a></li>
 			<li><a href="#/profile" >Edit profile</a></li>
 			<li><a href="#/profile/password">Change password</a></li>
 			<li><a ng-click="logout()">Logout</a></li>

@@ -1,0 +1,15 @@
+<p>Search</p>
+<p><input type="text" ng-model="nameFilter.name"/></p>
+<div class="col-lg-10">
+    <h2>
+        {{profileData.name}}  - Freinds ({{friends.length}} total)
+    </h2>
+    <ul class="list-unstyled">
+        <li ng-repeat="friend in friends | filter:nameFilter" class="pull-left box">
+            <div class="profile-image-small">
+                <img ng-src="{{friend.profileImageData}}" alt=""/>
+            </div>
+            <p>{{friend.name}}</p>
+        </li>
+    </ul>
+</div>

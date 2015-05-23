@@ -1,5 +1,7 @@
+
 <ul>
-    <li class ="request" ng-repeat="request in friendRequests">
+
+    <li class ="request" ng-repeat="request in friendRequests | filter:nameFilter">
         <div class="profile-image-small">
             <img ng-src="request.user.profileImageData" alt=""/>
         </div>
