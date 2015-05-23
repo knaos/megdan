@@ -5,7 +5,7 @@ app.factory('userService', function (baseUrl, authenticationService, $http){
 	return{
 		/**
 		 * Get the user preview data
-		 * @param  {strign} targetUser The user
+		 * @param  {string} targetUser The user
 		 * @param  {[type]} success    [description]
 		 * @param  {[type]} error      [description]
 		 * @return {Object}            Object:{id, prifleImageData, username, name, gender}

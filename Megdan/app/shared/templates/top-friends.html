@@ -1,0 +1,11 @@
+<div >
+    <ul>
+        <li>Friends - {{friends.length}} total</li>
+        <li ng-repeat="friend in friends.slice(0, 5)">
+            <div class="profile-image-small">
+                <img ng-src="{{friend.profileImageData}}" alt=""/>
+            </div>
+            <p>{{friend.name}}</p>
+        </li>
+    </ul>
+</div>
