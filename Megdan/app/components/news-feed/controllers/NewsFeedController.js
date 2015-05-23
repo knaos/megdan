@@ -3,6 +3,7 @@
 app.controller('NewsFeedController', function ($scope, profileService, notifyService, defaultPageSize, postService) {
     $scope.posts = {};
     var params = {};
+    $scope.comment1 = 'df';
 
     params.PageSize = defaultPageSize;
     profileService.getNewsFeedPages(params,
@@ -59,6 +60,22 @@ app.controller('NewsFeedController', function ($scope, profileService, notifySer
             },
             function (err) {
                 notifyService.showError(err.message, err);
+            });
+    };
+
+    $scope.showCommentInput = function (post) {
+        post.showCommentInput = true;
+    };
+
+    $scope.commentPost = function (post) {
+        var commentData = {};
+        commentData.commentContent = post.commentText;
+        postService.addCommentToPost(post.id, commentData,
+            function (response) {
+                notifyService.showInfo('Successfully commented');
+                post.comments.push(response);
+            }, function () {
+
             });
     };
 
