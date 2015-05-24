@@ -3,7 +3,7 @@
 
     <li class ="request" ng-repeat="request in friendRequests | filter:nameFilter">
         <div class="profile-image-small">
-            <img ng-src="request.user.profileImageData" alt=""/>
+            <img ng-src="{{request.user.profileImageData}}" alt=""/>
         </div>
         <div class="pull-right">
             <h3>{{request.user.name}}</h3>

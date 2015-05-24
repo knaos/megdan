@@ -74,6 +74,7 @@ app.controller('NewsFeedController', function ($scope, profileService, notifySer
             function (response) {
                 notifyService.showInfo('Successfully commented');
                 post.comments.push(response);
+                post.commentText = '';
             }, function () {
 
             });
