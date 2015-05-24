@@ -52,13 +52,15 @@ img{
 .post{
 	padding:10px;
 	border: 1px solid black;
+	background-color: #c8ffcb;
 
 }
 
-.comment{
-	padding:10px;
+.comment {
+	padding: 10px;
 	border: 1px solid black;
-	border-radius: 5px;
+	border-radius: 30px;
+	background-color: #83485d;
 }
 
 .box{

@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e55b771-3ef3-4e69-8bab-67166e34737c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/news-feed/controllers/NewsFeedController.js" afterPath="$PROJECT_DIR$/app/components/news-feed/controllers/NewsFeedController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/user_header/templates/friend-requests.html" afterPath="$PROJECT_DIR$/app/components/user_header/templates/friend-requests.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/news-feed/templates/news-feed.html" afterPath="$PROJECT_DIR$/app/components/news-feed/templates/news-feed.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/app.css" afterPath="$PROJECT_DIR$/assets/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/user_header/templates/user-header.html" afterPath="$PROJECT_DIR$/app/components/user_header/templates/user-header.html" />
     </list>
     <ignored path="Megdan.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,11 +66,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="news-feed.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="news-feed.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/components/news-feed/templates/news-feed.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.7182628">
-                  <caret line="43" column="46" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
+                <state vertical-scroll-proportion="-12.5">
+                  <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
                   <folding />
                 </state>
               </provider>
@@ -82,8 +79,18 @@
           <file leaf-file-name="user-header.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/components/user_header/templates/user-header.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+                <state vertical-scroll-proportion="-5.625">
+                  <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="app.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/assets/css/app.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.8210412">
+                  <caret line="63" column="1" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
                   <folding />
                 </state>
               </provider>
@@ -168,13 +175,13 @@
         <option value="$PROJECT_DIR$/app/shared/controllers/TopFriendsController.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/app/app.routes.js" />
-        <option value="$PROJECT_DIR$/app/components/user_header/templates/user-header.html" />
-        <option value="$PROJECT_DIR$/assets/css/app.css" />
         <option value="$PROJECT_DIR$/app/components/profile/templates/friends.html" />
         <option value="$PROJECT_DIR$/app/components/profile/controllers/FriendsController.js" />
         <option value="$PROJECT_DIR$/app/components/news-feed/controllers/NewsFeedController.js" />
         <option value="$PROJECT_DIR$/app/components/user_header/templates/friend-requests.html" />
         <option value="$PROJECT_DIR$/app/components/news-feed/templates/news-feed.html" />
+        <option value="$PROJECT_DIR$/app/components/user_header/templates/user-header.html" />
+        <option value="$PROJECT_DIR$/assets/css/app.css" />
       </list>
     </option>
   </component>
@@ -293,98 +300,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="shared" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Megdan" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Megdan" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user_header" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Megdan" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Megdan" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Megdan" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Megdan" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="news-feed" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Megdan" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Megdan" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="news-feed" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -811,21 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/user_header/templates/user-header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50167227">
-          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/home/templates/home-view.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23385301">
@@ -881,18 +781,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/news-feed/templates/news-feed.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7182628">
-          <caret line="43" column="46" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/news-feed/controllers/NewsFeedController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.92733186">
           <caret line="57" column="38" selection-start-line="57" selection-start-column="38" selection-end-line="57" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/news-feed/templates/news-feed.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.5">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/user_header/templates/user-header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.625">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8210412">
+          <caret line="63" column="1" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
           <folding />
         </state>
       </provider>
